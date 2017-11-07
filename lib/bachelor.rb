@@ -46,13 +46,13 @@ end
 
 def get_average_age_for_season (data, season)
   age_array = []
-  total_sum = ""  
-  data.find do |season_no, season_info| 
+  total_sum = ""
+  data.find do |season_no, season_info|
     season_no == season
-    season_info.each do |i| 
+    season_info.each do |i|
       age_array << (i[:age]).to_i
-    end 
-  end 
-  total_sum = age_array.inject(0) { |sum, i| sum + i } 
+    end
+  end
+  total_sum = age_array.inject(0) { |sum, i| sum + i }
   (total_sum.to_f/age_array.length).round
 end 
